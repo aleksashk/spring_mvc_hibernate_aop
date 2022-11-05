@@ -16,8 +16,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     private SessionFactory sessionFactory;
 
     @Override
-    //!Transactional - ответственность за открытие/закрытие транзакции
-    @Transactional
     public List<Employee> getAllEmployees() {
 
         Session session = sessionFactory.getCurrentSession();
