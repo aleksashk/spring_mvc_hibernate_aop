@@ -1,31 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Aleksandr
-  Date: 05.11.2022
-  Time: 23:48
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<DOCTYPE html/>
 <html>
-<head>
-    <title>Title</title>
-</head>
 <body>
-<h2>Employee info</h2>
+
+<h2>Employee Info</h2>
 <br>
 
 <form:form action="saveEmployee" modelAttribute="employee">
-    Name <form:input path="name"/>
-    <br><br>
-    Surname <form:input path="surname"/>
-    <br><br>
-    Department <form:input path="department"/>
-    <br><br>
-    Salary <form:input path="salary"/>
-    <br><br>
-    <input type="submit" value="OK">
+
+    <form:hidden path="id"/><!--скрытая форма - не отображается, но будет заполнено-->
+
+    Name<form:input path="name"/><!--срабатывают геттеры, которые не заполнены: null или 0-->
+    <br>
+    Surname<form:input path="surname"/><!--срабатывают геттеры, которые не заполнены: null или 0-->
+    <br>
+    Department<form:input path="department"/><!--срабатывают геттеры, которые не заполнены: null или 0-->
+    <br>
+    Salary<form:input path="salary"/><!--срабатывают геттеры, которые не заполнены: null или 0-->
+    <br>
+    <input type="submit" value="OK"><!--срабатывает сеттер и заполняет поля-->
 
 </form:form>
+
 </body>
 </html>

@@ -17,16 +17,16 @@ public class Employee {
     private int id;
 
     @Column(name = "name")
-    private String name;
+    String name;
 
     @Column(name = "surname")
-    private String surname;
+    String surname;
 
     @Column(name = "department")
-    private String department;
+    String department;
 
     @Column(name = "salary")
-    private int salary;
+    int salary;
 
     public Employee() {
     }
